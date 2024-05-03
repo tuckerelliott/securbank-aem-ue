@@ -9,7 +9,7 @@ export default async function decorate(block) {
   const url = window.location && window.location.origin && window.location.origin.includes('author')
     ? `${aemauthorurl}${persistedquery};path=${offerpath};variation=${variationname};ts=${Math.random() * 1000}`
     : `${aempublishurl}${persistedquery};path=${offerpath};variation=${variationname};ts=${Math.random() * 1000}`;
-  const options = { credentials: 'omit' };
+  const options = { credentials: 'include' };
 
   // console.log(url); //https://author-p123917-e1220159.adobeaemcloud.com/graphql/execute.json/securbank/OfferByPath;path=/content/dam/securbank/en/offers/997;variation=main;ts=172.03956935404463
 
